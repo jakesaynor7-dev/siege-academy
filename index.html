@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIEGE ACADEMY</title>
+<style>
+:root{color-scheme:dark;--bg:#080d18;--panel:#111c30;--blue:#2d75d7;--text:#eef4ff;--muted:#a9b8ce}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#080d18,#101d34);color:var(--text);font:16px/1.55 system-ui,Arial,sans-serif}
+header{padding:48px 20px 34px;text-align:center;border-bottom:1px solid #263954}
+header small{color:#70aaff;letter-spacing:.18em;font-weight:800}h1{font-size:clamp(2.2rem,8vw,4rem);line-height:1;margin:14px 0}header p{color:var(--muted);max-width:620px;margin:0 auto}
+main{max-width:1000px;margin:auto;padding:26px 16px 60px}.section-title{margin:30px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+article,.panel{background:var(--panel);border:1px solid #263954;border-radius:14px;padding:18px}
+.tag{color:#8dbdff;font-size:.75rem;font-weight:800;letter-spacing:.12em}
+h2{font-size:1.35rem;margin:7px 0}h3{margin:8px 0}p,li{color:var(--muted)}
+button{background:var(--blue);border:0;border-radius:9px;padding:10px 14px;color:white;font-weight:700;cursor:pointer}
+.done{background:#174b3c}footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
+</style>
+</head>
+<body>
+<header><small>ADVANCED PLAYER DEVELOPMENT</small><h1>SIEGE ACADEMY</h1><p>Train smarter. Make better decisions. Build consistent habits in Rainbow Six Siege.</p></header>
+<main>
+<div class="panel"><span class="tag">YOUR TRAINING HUB</span><h2>Advanced mechanics</h2><p>Work on reload discipline, peeking and movement. Mark lessons complete as you practise them.</p></div>
+<h2 class="section-title">Mechanics library</h2>
+<div class="grid" id="lessons">
+<article><span class="tag">MECHANICS</span><h2>Reload discipline</h2><p>Reload when you have safe time and cover, not automatically after every fight. Track ammo before committing.</p><button onclick="mark(this)">Mark complete</button></article>
+<article><span class="tag">PEEKING</span><h2>Jiggle peeking</h2><p>Use a brief shoulder peek to gather information, then return to cover. Avoid repeating the same timing.</p><button onclick="mark(this)">Mark complete</button></article>
+<article><span class="tag">PEEKING</span><h2>Re-peeking with purpose</h2><p>After showing your position, change the timing or angle before challenging again. Do not offer an easy repeat shot.</p><button onclick="mark(this)">Mark complete</button></article>
+<article><span class="tag">POSITIONING</span><h2>Slicing the pie</h2><p>Clear angles in small sections while keeping as much cover as possible. Avoid exposing yourself to several lines at once.</p><button onclick="mark(this)">Mark complete</button></article>
+<article><span class="tag">MOVEMENT</span><h2>Move with a reason</h2><p>Choose movement that supports your next position. Pause when information matters and avoid unnecessary noise.</p><button onclick="mark(this)">Mark complete</button></article>
+<article><span class="tag">GUNFIGHTS</span><h2>Isolate engagements</h2><p>Use cover, teammate information and timing to reduce the number of angles you must manage at once.</p><button onclick="mark(this)">Mark complete</button></article>
+</div>
+<h2 class="section-title">Weekly practice template</h2>
+<div class="panel"><ul><li>Review a short section of your own gameplay and identify one repeated mistake.</li><li>Practise one mechanic deliberately in a low-pressure mode.</li><li>In matches, focus on one decision-making goal rather than trying to change everything at once.</li><li>At the end, note what improved and what to work on next.</li></ul></div>
+</main>
+<footer>Independent community training project. Not affiliated with Ubisoft. Game mechanics may change.</footer>
+<script>
+function mark(btn){btn.classList.toggle('done');btn.textContent=btn.classList.contains('done')?'Completed ✓':'Mark complete';}
+</script>
+</body></html>
